@@ -35,8 +35,8 @@ def mobile_management(request):
                     "sessionName": "BStack first_test",
 
                     # Set your access credentials
-                    "userName": project.config.USER_NAME,
-                    "accessKey": project.config.ACCESS_KEY
+                    "userName": config.config.USER_NAME,
+                    "accessKey": config.config.ACCESS_KEY
                 }
             })
 
@@ -57,13 +57,13 @@ def mobile_management(request):
                     "sessionName": "BStack second_test",
 
                     # Set your access credentials
-                    "userName": project.config.USER_NAME,
-                    "accessKey": project.config.ACCESS_KEY
+                    "userName": config.config.USER_NAME,
+                    "accessKey": config.config.ACCESS_KEY
                 }
             })
 
-    browser.config.driver = webdriver.Remote(project.config.URL, options=options)
-    browser.config.timeout = project.config.TIMEOUT
+    browser.config.driver = webdriver.Remote(config.config.URL, options=options)
+    browser.config.timeout = config.config.TIMEOUT
 
     yield
 
